@@ -41,8 +41,14 @@
        
        
 ## 异常捕获之 window.onerror
+
+             window.onerror=function(e){
+                      if(e){
+                        alert（"e"）
+                       }
+                     }
+              a();
           
-         
 ## 分步式提交表单
     css样式隐藏，显示当前页，隐藏其他
 
