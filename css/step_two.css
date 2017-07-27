@@ -1,0 +1,198 @@
+html,
+body {
+    background: #F5F5F5;
+    margin: 0;
+    box-sizing: border-box;
+    max-width: 640px !important;
+    margin: 0 auto;
+    color:#7B8792;
+    padding: 4px;
+}
+.top {
+    position: relative;
+}
+.top ul{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-bottom: 0.2rem;
+    position: relative;
+    z-index: 100;
+}
+.top ul li{
+    padding-top: 0.2rem;
+}
+.top ul li span{
+    display: block;
+    border: 2px solid #00B5AD;
+    width: 0.5rem;
+    height: 0.5rem;
+    position: relative;
+    background-color: #62CFCA;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+.top ul li p{
+    text-align: center;
+    padding-top: 0.2rem;
+    color: #00B5AD;
+}
+.top ul li span i{
+    transform: rotate(-45deg);
+    display: block;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform:  translate(-50%,-50%) rotate(-45deg);
+    font-size: 0.3rem;
+    color: white;
+}
+.top .border{
+    height: 25px;
+    background:url("../images/line.png") center center repeat-x;
+    width: 80%;
+    position: absolute;
+    top:32%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%,-50%);
+}
+input {
+    height: 0.70rem;
+    line-height: 0.70rem;
+    line-height: normal;
+    vertical-align: middle;
+    width: 100%;
+    margin-bottom: 0.1rem;
+    text-indent: 1em;
+    color: #00B5AD;
+    font-size: 0.24rem;
+    border-bottom: 1px solid #00B5AD;
+    border-radius: 0;
+    background-color: #fff;
+}
+.myform {
+    padding: 5px 20px;
+    background-color: #fff;
+
+}
+.myform .title {
+    font-size: 0.36rem;
+    font-family: "SimHei";
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    color: #00B5AD;
+}
+.myform .diqu {
+    position: relative;
+    width: 96%;
+    float: left;
+    vertical-align: middle;
+    z-index: 10;
+    border-radius: 0;
+}
+.myform .diqu .area {
+    height: 0.72rem;
+    width: 100%;
+    vertical-align: middle;
+    margin-bottom: 0.1rem;
+    color:#00B5AD;
+    font-size: 0.2rem;
+    z-index: 10;
+    font-size: 0.24rem;
+    border-bottom: 1px solid #00B5AD;
+    border-radius: 0;
+    background-color: #fff;
+}
+.left{
+    width: 50%;
+}
+.right{
+    width: 50%;
+}
+.born{
+    width: 50%;
+}
+.myform .diqu .area option {
+    color:#00B5AD;
+    background-color: #fff;
+    font-size: 0.2rem;
+}
+.myform .diqu .arrow {
+    position: absolute;
+    top: 0.2rem;
+    right: 5px;
+    z-index: 0 ;
+    width: 10%;
+}
+.myform .tipss {
+    padding: 0 0px;
+    vertical-align: middle;
+    color: #D92B2C;
+    margin-top: 0.5rem;
+    line-height: 0.1rem;
+}
+.myform .sbm {
+    width: 92%;
+    margin-left: 4%;
+    margin-bottom: 0.4rem;
+    margin-top: 0.5rem;
+    background-color: #00B5AD;
+    border-radius: 4px;
+    box-shadow: 0px 5px 0px #15413F;
+    color: white;
+    font-size: 0.30rem !important;
+    font-family: "SimHei";
+    -webkit-appearance: none;
+    text-indent: 0.00rem;
+    margin-bottom: 0.4rem;
+}
+.links {
+    text-align: center;
+    width: 50%;
+    margin-bottom: 0.1rem;
+}
+.links span {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #00B5AD;
+    border-radius: 4px;
+    height: 0.70rem;
+    line-height: 0.7rem;
+    color: white;
+    font-family: '微软雅黑', Arial;
+    letter-spacing: 1px;
+    font-size: 0.28rem;
+}
+.links .tip,.tips{
+    margin-left: 10px;
+    font-size: 0.2rem;
+}
+.box{
+    position: relative;
+    margin-top: 0.2rem;
+}
+.tipsss{
+    font-size: 0.2rem;
+    margin-left: 0.1rem;
+    position: absolute;
+    top:45%;
+    right: 20%;
+    transform: translateY(-50%);
+    color: #00B5AD;
+}
+textarea{
+    width: 100%;
+    margin-top: 0.1rem;
+    border: none;
+    border-bottom: 1px solid #00B5AD;
+    border-radius: 0;
+}

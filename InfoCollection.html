@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+
+    <title>脑瘫儿童公益救助活动</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/InfoCollection.css"/>
+    <script src="jquery-1.8.3/jquery.min.js"></script>
+    <script src="layer/layer.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/url.js"></script>
+    <style>
+        body .demo-class .layui-layer-title{background:#00B5AD; color:#fff; border: none;}
+        body .demo-class .layui-layer-btn a {background:#00B5AD;}
+        body .demo-class .layui-layer-btn a {border: none}
+        body .demo-class .layui-layer-btn .layui-layer-btn1{background:#999;}
+    </style>
+</head>
+<body>
+<div class="top">
+    <ul>
+        <li>
+            <span>
+                <i>1</i>
+            </span>
+            <p>调查人信息</p>
+        </li>
+        <li>
+            <span>
+                <i>2</i>
+            </span>
+            <p>患者信息</p>
+        </li>
+        <li>
+            <span>
+                <i>3</i>
+            </span>
+            <p>监护人信息</p>
+        </li>
+    </ul>
+    <p class="border"></p>
+</div>
+<form action="" id="myform" class="myform">
+
+    <!--第一页表单-->
+    <section class="one_form">
+        <h4 class="title">调查人</h4>
+        <input type="text" name="name" id="investigatorName" value="" placeholder="请填写调查人姓名"/>
+        <h4 class="title">调查人联系电话</h4>
+        <input type="tel" name="phone" id="investigatorTel" value=""  placeholder="请填写调查人电话"/>
+        <h4 class="title">调查人性别</h4>
+        <div class="diqu">
+            <select name="sex" readonly id="investigatorSex" class="area" >
+                <option value="">请选择调查人性别</option>
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select>
+            <img class="arrow step_one" src="images/arrow.png" alt=""/>
+        </div>
+        <h4 class="title">调查人所在公益团队</h4>
+        <!--<input type="text" name="teamName" id="teamName" value="" placeholder="请填写调查人所在公益团队"/>-->
+        <div class="diqu">
+            <select name="teamName" readonly id="teamName" class="area" >
+                <option value="">请选择所在团队</option>
+                <!--<option value="1">男</option>-->
+                <!--<option value="2">女</option>-->
+            </select>
+            <img class="arrow step_one" src="images/arrow.png" alt=""/>
+        </div>
+
+
+        <input type="text" name="userId" id="userId" value="" style="display: none"/>
+        <input type="button" class="sbm" id="step_one"  value="下一步，填写患者信息"/>
+
+    </section>
+
+    <!--第二页表单-->
+    <section class="two_form">
+        <h4 class="title">患者姓名</h4>
+        <input type="text" name="patientName" id="childname" value="" placeholder="请填写患者姓名"/>
+        <div class="box clearfix">
+            <div class="links fl">
+                <span id="single">上传患者照片</span>
+                <input  id="childpic" name="patientPhoto" style="display: none" value="" type="text"/>
+            </div>
+            <i class="tipsss fr">未上传</i>
+        </div>
+        <div class="clearfix">
+            <div class="left fl">
+                <h4 class="title">性别</h4>
+                <div class="diqu">
+                    <select name="patientSex" id="childSex" readonly class="area" >
+                        <option value="">请选择患者性别</option>
+                        <option value="1">男</option>
+                        <option value="2">女</option>
+                    </select>
+                    <img class="arrow" src="images/arrow.png" alt=""/>
+                </div>
+            </div>
+            <div class="right fl">
+                <h4 class="title">年龄</h4>
+                <div class="diqu diqu_age">
+                    <select name="patientAge" id="childAge" readonly class="area" >
+                        <option value="">请选择患者年龄</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                    </select>
+                    <img class="arrow" src="images/arrow.png" alt=""/>
+                </div>
+            </div>
+            <div class="left fl">
+                <h4 class="title">出生年月</h4>
+                <div class="diqu">
+                    <input type="date" name="patientBirthday" id="childBorn" value="" placeholder="请选择出生年月"/>
+                    <img class="arrow" src="images/arrow.png" alt=""/>
+                </div>
+            </div>
+            <div class="right fl">
+                <h4 class="title">所在区县</h4>
+                <div class="diqu diqu_age">
+                    <select name="patientArea" id="area" class="area" >
+                        <option style="color: #7B8792" value="">请选择患者所在区域</option>
+                        <option value="武都区">武都区</option>
+                        <option value="宕昌">宕昌</option>
+                        <option value="文县">文县</option>
+                        <option value="康县">康县</option>
+                        <option value="成县">成县</option>
+                        <option value="徽县">徽县</option>
+                        <option value="礼县">礼县</option>
+                        <option value="西和">西和县</option>
+                        <option value="两当">两当县</option>
+                    </select>
+                    <img class="arrow" src="images/arrow.png" alt=""/>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="title">患者身份证号码</h4>
+        <input type="number" name="patientIDNumber" id="childIDCard" value="" placeholder="患者身份证号码"/>
+        <h3 class="title">病情描述</h3>
+    <textarea name="conditionDescription" id="desc" cols="30" rows="10">
+
+    </textarea>
+        <input type="button" class="sbm"  id="step_two" value="下一步，填写患者监护人信息"/>
+
+    </section>
+
+    <!--第三页表单-->
+    <section class="three_form">
+        <h4 class="title">监护人姓名</h4>
+        <input type="text" name="guardianName" id="guardianName" value="" placeholder="请填写监护人姓名"/>
+        <h4 class="title">与患者关系</h4>
+        <input type="text" name="relationshipWithPaitent" id="relation" value="" placeholder="例如：父子、父女、母子、母女、叔侄、祖孙等"/>
+        <div class="clearfix">
+            <div class="left fl">
+                <h4 class="title">性别</h4>
+                <div class="diqu">
+                    <select name="guardianSex" id="guardianSex" readonly class="area" >
+                        <option value="">请选择患者性别</option>
+                        <option value="1">男</option>
+                        <option value="2">女</option>
+                    </select>
+                    <img class="arrow" src="images/arrow.png" alt=""/>
+                </div>
+            </div>
+            <div class="right fl">
+                <h4 class="title">名族</h4>
+                <input type="text" name="guardianNation" id="guardianNation" value="" placeholder="请填写监护人名族"/>
+            </div>
+        </div>
+        <h4 class="title">家庭地址</h4>
+        <input type="text" name="guardianAdress" maxlength="50" id="adress" value="" placeholder="请填写家庭地址"/>
+        <h4 class="title">监护人联系电话</h4>
+        <input type="tel" name="guardianPhone" id="guardianTel" value="" placeholder="请填写监护人电话号码"/>
+        <h4 class="title">监护人身份证号</h4>
+        <input type="number" name="guardianIDNumber" id="guardianIDCard" value="" placeholder="请填写监护人身份证号"/>
+        <input type="text" name="projectId" id="projectId" value="" style="display:none;"/>
+        <input type="button" class="sbm" id="sbm" value="提交申请表"/>
+    </section>
+
+</form>
+
+</body>
+
+<script src="js/InfoCollection.js"></script>
+
+<script>
+
+
+//    //第一页
+//    var investigatorName=document.getElementById("investigatorName")
+//    var reginvestigatorName=/^[\u4e00-\u9fa5]{2,}$/;
+//    check(investigatorName,reginvestigatorName);
+//    var investigatorTel=document.getElementById("investigatorTel");
+//    var reginvestigatorTel=/^0?(13|14|15|18)[0-9]{9}$/
+//    check(investigatorTel,reginvestigatorTel);
+//
+//
+//    //第二页
+//    var childname=document.getElementById("childname")
+//    var regchildname=/^[\u4e00-\u9fa5]{2,}$/;
+//    check(childname,regchildname);
+////    var desc=document.getElementById("desc");
+////    var regdesc=/[\dA-Za-z\u4E00-\u9FA5]+/
+////    check(desc,regdesc);
+//
+//    //第三页
+//    var guardianName=document.getElementById("guardianName")
+//    var regguardianName=/^[\u4e00-\u9fa5]{2,}$/;
+//    check(guardianName,regguardianName);
+//
+//    var relation=document.getElementById("relation")
+//    var regRelation=/^[\u4e00-\u9fa5]{2,}$/;
+//    check(relation,regRelation);
+//
+//    var guardianNation=document.getElementById("guardianNation");
+//    var regNation=/^[\u4e00-\u9fa5]{1,}$/;
+//    check(guardianNation,regNation);
+//
+//    var adress=document.getElementById("adress");
+//    var regAdress=/^(?=.*?[\u4E00-\u9FA5])[\d\u4E00-\u9FA5]+/
+//    check(adress,regAdress);
+//
+//    var guardianTel=document.getElementById("guardianTel");
+//    var regguardianTel=/^0?(13|14|15|18)[0-9]{9}$/
+//    check(guardianTel,regguardianTel);
+//
+//    function check(inp, reg) {
+//        inp.onblur = function () {
+//            if (reg.test(this.value)) {
+//            } else {
+//                layer.open({
+//                    skin:"demo-class",
+//                    title:"提示",
+//                    content:"输入错误",
+//                })
+//            }
+//        };
+//    }
+//
+//    function IdentityCodeValid(code) {
+//        var city={11:"北京",12:"天津",13:"河北",14:"山西",15:"内蒙古",21:"辽宁",22:"吉林",23:"黑龙江 ",31:"上海",32:"江苏",33:"浙江",34:"安徽",35:"福建",36:"江西",37:"山东",41:"河南",42:"湖北 ",43:"湖南",44:"广东",45:"广西",46:"海南",50:"重庆",51:"四川",52:"贵州",53:"云南",54:"西藏 ",61:"陕西",62:"甘肃",63:"青海",64:"宁夏",65:"新疆",71:"台湾",81:"香港",82:"澳门",91:"国外 "};
+//        var tip = "";
+//        var pass= true;
+//
+//        if(!code || !/^\d{6}(18|19|20)?\d{2}(0[1-9]|1[12])(0[1-9]|[12]\d|3[01])\d{3}(\d|X)$/i.test(code)){
+//            tip = "输入错误";
+//            pass = false;
+//        }
+//
+//        else if(!city[code.substr(0,2)]){
+//            tip = "输入错误";
+//            pass = false;
+//        }
+//        else{
+//            //18位身份证需要验证最后一位校验位
+//            if(code.length == 18){
+//                code = code.split('');
+//                //∑(ai×Wi)(mod 11)
+//                //加权因子
+//                var factor = [ 7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2 ];
+//                //校验位
+//                var parity = [ 1, 0, 'X', 9, 8, 7, 6, 5, 4, 3, 2 ];
+//                var sum = 0;
+//                var ai = 0;
+//                var wi = 0;
+//                for (var i = 0; i < 17; i++)
+//                {
+//                    ai = code[i];
+//                    wi = factor[i];
+//                    sum += ai * wi;
+//                }
+//                var last = parity[sum % 11];
+//                if(parity[sum % 11] != code[17]){
+////                    tip = "输入错误";
+//                    pass =false;
+//                }
+//            }
+//        }
+//        if(!pass){
+//            layer.open({
+//                skin:"demo-class",
+//                title:"提示",
+//                content:"输入错误",
+//            })
+//        }
+//        else{
+//
+//        }
+//        return pass;
+//    }
+//    $("#childIDCard").on("blur", function () {
+//        var c=$("#childIDCard").val();
+//        console.log(c);
+//        IdentityCodeValid(c);
+//    })
+//
+//    $("#guardianIDCard").on("blur", function () {
+//        var c=$("#guardianIDCard").val();
+//        console.log(c);
+//        IdentityCodeValid(c);
+//    })
+//
+//    $("#single").on("click", function () {
+//        layer.open({
+//            type: 2,
+//            title: '上传患者照片',
+//            shadeClose: true,
+//            shade: false,
+//            maxmin: false, //开启最大化最小化按钮
+//            area: ['100%', '100%'],
+//            content: './upload.html'
+//        });
+//    });
+//
+
+</script>
+</html>

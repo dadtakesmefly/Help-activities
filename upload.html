@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>上传图片</title>
+    <script type="text/javascript" src="uploadpic/zyupload/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="uploadpic/zyupload/skins/zyupload-1.0.0.css"/>
+    <script src="js/common.js"></script>
+    <script src="layer/layer.js"></script>
+    <script src="js/upload.js"></script>
+    <style>
+        html,body{
+            height: 90%;
+            background: #F5F5F5;;
+        }
+        .upload_preview{
+            background-color: #F5F5F5 !important;
+        }
+        .status_bar{
+            background-color: #fff;
+        }
+        .webuploader_pick{
+            background-color: #fff;
+            color:#7B8792;
+        }
+        .upload_btn{
+            background-color: #00B5AD; 
+        }
+        a:hover{
+            text-decoration: none !important;
+        }
+        .add{
+            font-size: 0.5rem !important;
+            margin-top: -0.2rem;
+        }
+        .uploadImg p{
+            /*font-size: 0.24rem;*/
+            color:#7B8792;
+            background-color: #fff;
+
+        }
+        .add_imgBox{
+            background-color: #fff;
+            border: 1px dotted #00B5AD;
+        }
+        body .demo-class .layui-layer-title{background:#00B5AD; color:#fff; border: none;}
+        body .demo-class .layui-layer-btn a {background:#00B5AD;}
+        body .demo-class .layui-layer-btn a {border: none}
+        body .demo-class .layui-layer-btn .layui-layer-btn1{background:#999;}
+        .mask{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            top:0;
+            left: 0;;
+            z-index: 100;
+            text-align: center;
+            color:white;
+            display: none;
+        }
+        .text{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            font-size: 0.2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="mask"><div class="text">正在上传图片，请耐心等待</div></div>
+<div id="zyupload" class="zyupload"></div>
+
+</body>
+</html>
+
+
+
+
+
+
+
