@@ -114,7 +114,7 @@
             //获取用户id
             window.onload= function () {
                 //alert(aisinJs.getUserId());
-                var userid=aisinJs.getUserId(); //app内才有的方法，app外就会报错，然后执行window.onerror里面的代码
+                var userid=aisinJs.getUserId(); 
                 $("#getuserid").attr("value",userid);
                 if(userid != ""){
                     document.getElementById("takein").href="./InfoCollection.html"+"?userid="+userid
