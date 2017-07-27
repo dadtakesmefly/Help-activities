@@ -113,9 +113,11 @@
             }
             //获取用户id
             window.onload= function () {
-                //alert(aisinJs.getUserId());
+                //alert(aisinJs.getUserId())
+                
                 var userid=aisinJs.getUserId(); 
-                $("#getuserid").attr("value",userid);
+                
+              $("#getuserid").attr("value",userid);
                 if(userid != ""){
                     document.getElementById("takein").href="./InfoCollection.html"+"?userid="+userid
                 }
